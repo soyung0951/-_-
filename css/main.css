@@ -1,0 +1,102 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header 전체 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* 로고 이미지 */
+header img {
+  height: 50px;
+}
+
+/* 로그인 / 회원가입 / 홈 */
+header div ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header div ul li {
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+header div ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+header div ul li a:hover {
+  text-decoration: underline;
+  color: #007a33;
+}
+
+/* Navigation (nav bar) */
+nav {
+  background-color: #ffffff;
+  border-bottom: 4px solid #007a33;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+nav li {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid #007a33;
+  color: #007a33;
+}
+
+/* main 영역 */
+main {
+  flex: 1;
+  padding: 5px 0px;
+  min-height: 400px;
+}
+
+/* footer */
+footer {
+  background-color: #007a33;
+  color: white;
+  text-align: center;
+  height: 200px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
