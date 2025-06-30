@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모두의_길:대구</title>
-    <link rel="stylesheet" href="../css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모두의_길:대구</title>
+  <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body onload="loadPage('home.html'); openPopup('popup1.html')">
-    <div class="wrapper">
-        <header>
-            <a href="#" onclick="loadPage('home.html')">
-                <img src="../img/logo.png" alt="모두의_길:대구의 로고 클릭하면 홈 화면으로 돌아갑니다.">
-            </a>
+  <!-- 페이지가 로드될 때 home.html을 iframe에 로드하고 로그인 팝업 자동 실행 -->
+  <div class="wrapper">
+    <header>
+      <!-- 헤더 영역: 로고 및 상단 메뉴 -->
+      <a href="#" onclick="loadPage('home.html')">
+        <img src="../img/logo.png" alt="모두의_길:대구의 로고 클릭하면 홈 화면으로 돌아갑니다." />
+      </a>
 
-            <div>
-                <ul>
-                    <li><a href="#" onclick="openPopup('popup1.html')">로그인</a></li>
-                    <li><a href="#" onclick="openPopup('popup2.html')">회원가입</a></li>
-                    <li><a href="#" onclick="loadPage('home.html')">홈</a></li>
-                </ul>
-            </div>
+      <div>
+        <ul>
+          <!-- 로그인 팝업 열기 -->
+          <li><a href="#" onclick="openPopup('popup1.html')">로그인</a></li>
+          <!-- 회원가입 팝업 열기 -->
+          <li><a href="#" onclick="openPopup('popup2.html')">회원가입</a></li>
+          <!-- 홈 페이지 iframe에 로드 -->
+          <li><a href="#" onclick="loadPage('home.html')">홈</a></li>
+        </ul>
+      </div>
+    </header>
 
-        </header>
+    <nav>
+      <!-- 네비게이션 메뉴: 클릭 시 iframe에 해당 페이지를 로드 -->
+      <ul>
+        <li><a href="#" onclick="loadPage('menu1.html')">교통 소개</a></li>
+        <li><a href="#" onclick="loadPage('menu2.html')">편의 시설 안내</a></li>
+        <li><a href="#" onclick="loadPage('menu3.html')">교통 지원 서비스</a></li>
+        <li><a href="#" onclick="loadPage('menu4-1.html')">불편 공유 게시판</a></li>
+        <li><a href="#">이용 팁</a></li> <!-- 클릭 이벤트 없음 -->
+      </ul>
+    </nav>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" onclick="loadPage('menu1.html')">교통 소개</a>
-                </li>
-                <li>
-                    <a href="#" onclick="loadPage('menu2.html')">편의 시설 안내</a>
-                </li>
-                <li>
-                    <a href="#" onclick="loadPage('menu3.html')">교통 지원 서비스</a>
-                </li>
-                <li>
-                    <a href="#" onclick="loadPage('menu4-1.html')">불편 공유 게시판</a>
-                </li>
-                <li>
-                    <a href="#">이용 팁</a>
-                </li>
-            </ul>
-        </nav>
+    <main>
+      <!-- 주요 콘텐츠 표시용 iframe -->
+      <iframe id="contentFrame" src="" width="100%" height="675px" style="border:none;"></iframe>
+    </main>
 
-        <main>
-            <iframe id="contentFrame" src="" width="100%" height="675px" style="border:none;"></iframe>
-        </main>
-
-        <footer>
-            <p><br><br>개인정보 처리방침 | 저작권보호정책 | 이용약관 | 이메일주소무단수집거부 | 영상정보처리기기운영방침<br><br>(43010) 대구광역시 달성군 구지면 창리로11길 93</p>
-        </footer>
-    </div>
-
-    <script src="../js/main.js"></script>
+    <footer>
+      <!-- 하단 정책 및 주소 정보 -->
+      <p><br /><br />개인정보 처리방침 | 저작권보호정책 | 이용약관 | 이메일주소무단수집거부 | 영상정보처리기기운영방침
+        <br /><br />(43010) 대구광역시 달성군 구지면 창리로11길 93
+      </p>
+    </footer>
+  </div>
+  <script src="../js/main.js"></script>
 </body>
 </html>

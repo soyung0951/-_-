@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>로그인</title>
-  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../css/popup.css" />
 </head>
 <body>
+  <!-- 로그인 팝업 컨테이너 -->
   <div class="popup-container">
+    <!-- 팝업 헤더: 로그인 제목과 닫기 버튼 -->
     <div class="popup-header shadow-box">
-        로그인
-        <button class="close-btn" onclick="window.close()" aria-label="닫기">×</button>
+      로그인
+      <button class="close-btn" onclick="window.close()" aria-label="닫기">×</button>
     </div>
 
+    <!-- 아이디 입력 필드 -->
     <div class="form-group">
       <label>아이디
-        <input type="text" id="userId" placeholder="아이디 입력">
+        <input type="text" id="userId" placeholder="아이디 입력" />
       </label>
     </div>
 
+    <!-- 비밀번호 입력 필드 -->
     <div class="form-group">
       <label>비밀번호
-        <input type="password" id="password" placeholder="비밀번호 입력">
+        <input type="password" id="password" placeholder="비밀번호 입력" />
       </label>
     </div>
 
+    <!-- 로그인 버튼: login 함수 호출 -->
     <button class="login-btn shadow-box" onclick="login()">로그인</button>
 
+    <!-- 회원가입 및 아이디/비밀번호 찾기 링크 -->
     <div class="links">
       <a href="#" onclick="openPopup('popup2.html')">회원가입</a> |
       <a href="#">아이디 찾기</a> |
       <a href="#">비밀번호 찾기</a>
     </div>
   </div>
-
   <script src="../js/popup.js"></script>
 </body>
 </html>

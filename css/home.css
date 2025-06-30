@@ -1,119 +1,212 @@
 /* ===== 기본 설정 ===== */
 body {
-	font-family: 'Noto Sans KR', sans-serif;
-	margin: 0;
-	padding: 0 10px;
-	background-color: #fff;
-	color: #fff;
-	box-sizing: content-box;
+  /* 외부 여백과 내부 여백 초기화 */
+  margin: 0;
+  padding: 0 10px;
+
+  /* 한글 지원 폰트 지정 */
+  font-family: 'Noto Sans KR', sans-serif;
+
+  /* 배경 및 글자 색 지정 */
+  background-color: #fff;
+  color: #fff;
+
+  /* 박스 크기 계산 시 패딩, 보더 포함하지 않음 */
+  box-sizing: content-box;
 }
 
-/* ===== 상단 배너 (이미지 위에 텍스트 표시) ===== */
+/* ===== 상단 배너 섹션 (이미지 위 텍스트 표시 영역) ===== */
 .hero-section {
-	position: relative;
-	max-width: 1400px;
-	height: 375px;
-	margin: 20px auto 10px;
-	border-radius: 12px;
-	overflow: hidden;
-	background-color: #8abc9e;
+  /* 위치 지정 및 최대 너비 */
+  position: relative;
+  max-width: 1400px;
+
+  /* 높이 및 마진 설정 (상단 20px, 하단 10px) */
+  height: 375px;
+  margin: 20px auto 10px;
+
+  /* 배경색과 둥근 모서리, 넘치는 내용 숨김 */
+  background-color: #8abc9e;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* 배너 내 이미지 스타일 */
 .hero-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-	border-radius: 12px;
+  /* 블록 레벨로 표시하여 줄바꿈 처리 */
+  display: block;
+
+  /* 너비와 높이 100%로 부모 영역 꽉 채우기 */
+  width: 100%;
+  height: 100%;
+
+  /* 이미지가 영역에 맞게 잘림 없이 채워지도록 */
+  object-fit: cover;
+
+  /* 이미지 모서리 둥글게 */
+  border-radius: 12px;
 }
 
+/* 이미지 위 텍스트 영역 스타일 */
 .hero-text {
-	position: absolute;
-	font-size: 2rem;
-	font-weight: 700;
-	color: #fff;
-	border-radius: 8px;
-	text-align: right;
-	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.4);
-	box-sizing: border-box;
-	border-radius: 0 0 12px 12px;
+  /* 절대 위치 지정 (부모 기준 아래, 오른쪽) */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  /* 텍스트 영역 너비 및 내부 여백 */
+  width: 100%;
+  padding: 20px;
+
+  /* 텍스트 크기 및 굵기 지정 */
+  font-size: 2rem;
+  font-weight: 700;
+
+  /* 텍스트 색 및 정렬 */
+  color: #fff;
+  text-align: right;
+
+  /* 글자에 그림자 효과 부여하여 가독성 향상 */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+  /* 반투명 검은 배경 추가하여 텍스트 식별 용이 */
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /* 박스 크기 계산에 패딩 포함 */
+  box-sizing: border-box;
+
+  /* 텍스트 박스 아래쪽만 둥글게 처리 */
+  border-radius: 0 0 12px 12px;
+
+  /* 내부 둥근 모서리(추가) */
+  border-radius: 8px;
 }
 
-/* ===== 카드 박스 ===== */
+/* ===== 카드 박스 섹션 ===== */
 .info-boxes {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 20px 0;
+  /* 그리드 레이아웃 지정, 3열 */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* 카드들 사이 간격 */
+  gap: 20px;
+
+  /* 최대 너비, 수평 중앙 정렬 */
+  max-width: 1400px;
+  margin: 0 auto;
+
+  /* 위아래 여백 */
+  padding: 20px 0;
 }
 
+/* 개별 카드 스타일 */
 .info-box {
-	background-color: #8abc9e;
-	border-radius: 10px;
-	text-align: right;
-	font-size: 1.2rem;
-	font-weight: 700;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-	height: 230px;
-	box-sizing: content-box;
-	color: #fff;
-	position: relative; /* 이미지 기준으로 텍스트 위치할 수 있도록 */
-	overflow: hidden;
-	padding: 0;
+  /* 자식 텍스트 위치 기준 설정 */
+  position: relative;
+
+  /* 배경색 및 글자 색 지정 */
+  background-color: #8abc9e;
+  color: #fff;
+
+  /* 둥근 모서리 처리 */
+  border-radius: 10px;
+
+  /* 글자 크기와 굵기 */
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  /* 텍스트 오른쪽 정렬 */
+  text-align: right;
+
+  /* 고정 높이 지정 */
+  height: 230px;
+
+  /* 내부 여백 없음 */
+  padding: 0;
+
+  /* 그림자 효과 부여 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  /* 박스 크기 계산 방식 */
+  box-sizing: content-box;
+
+  /* 넘치는 내용 숨김 */
+  overflow: hidden;
 }
 
+/* 카드 내 텍스트 오버레이 박스 */
 .info-text {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	padding: 20px;
-	background: rgba(0, 0, 0, 0.5);
-	color: white;
-	text-align: right;
-	box-sizing: border-box;
+  /* 절대 위치 지정 (카드 하단) */
+  position: absolute;
+  bottom: 0;
+
+  /* 가로 전체 넓이 차지 */
+  width: 100%;
+
+  /* 내부 여백 */
+  padding: 20px;
+
+  /* 반투명 검은 배경 */
+  background: rgba(0, 0, 0, 0.5);
+
+  /* 텍스트 색과 정렬 */
+  color: white;
+  text-align: right;
+
+  /* 박스 크기 계산에 패딩 포함 */
+  box-sizing: border-box;
 }
 
+/* 카드 내 텍스트 문단 스타일 */
 .info-text p {
-	margin: 0;
-	font-size: 1.1rem;
-	font-weight: bold;
-	line-height: 1.4;
+  /* 기본 여백 제거 */
+  margin: 0;
+
+  /* 글자 크기와 굵기 */
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  /* 줄 간격 */
+  line-height: 1.4;
 }
 
+/* 카드 내 이미지 스타일 */
 .info-box img {
-	width: 100%;
-	border-radius: 8px;
-	margin: 0 0 10px 0;
+  /* 가로 꽉 채우기 */
+  width: 100%;
+
+  /* 아래쪽 여백 */
+  margin: 0 0 10px 0;
+
+  /* 모서리 둥글게 */
+  border-radius: 8px;
 }
 
-/* ===== 반응형 ===== */
+/* ===== 반응형: 화면 너비 768px 이하 ===== */
 @media screen and (max-width: 768px) {
-	body {
-		padding: 0 10px;
-		color: #000;
-	}
+  body {
+    /* 좌우 패딩 유지, 텍스트 색상 변경 */
+    padding: 0 10px;
+    color: #000;
+  }
 
-	.hero-section,
-	.info-boxes {
-		max-width: 100%;
-		margin: 0 auto;
-	}
+  /* 배너 및 카드 박스 영역 너비 최대 100% */
+  .hero-section,
+  .info-boxes {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
-	.info-boxes {
-		grid-template-columns: 1fr;
-		gap: 15px;
-		padding: 20px 0;
-	}
+  /* 카드 박스 1열 레이아웃 변경 */
+  .info-boxes {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 0;
+  }
 
-	.info-box {
-		font-size: 1.1rem;
-		min-height: auto;
-	}
+  /* 카드 내 폰트 크기 및 최소 높이 조절 */
+  .info-box {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
 }

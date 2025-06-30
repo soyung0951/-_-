@@ -1,101 +1,177 @@
-/* 기본 초기화 */
+/* ===== 기본 초기화 ===== */
+/* 모든 요소에 margin과 padding을 0으로 초기화하고, 
+   box-sizing을 border-box로 설정하여 패딩과 보더가 전체 크기에 포함되도록 함 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== 본문 설정 ===== */
 body {
+  /* 화면 전체 높이 사용 */
   height: 100%;
+
+  /* 한글 지원 기본 폰트 지정 */
   font-family: "Noto Sans KR", sans-serif;
+
+  /* 배경색과 기본 글자색 지정 */
   background-color: #ffffff;
   color: #222;
 }
 
+/* ===== 전체 레이아웃 래퍼 ===== */
 .wrapper {
+  /* 플렉스 박스로 세로 방향 정렬 */
   display: flex;
   flex-direction: column;
+
+  /* 최소 화면 높이를 100vh로 설정하여 화면 꽉 채우기 */
   min-height: 100vh;
 }
 
-/* header 전체 */
+/* ===== 헤더 전체 스타일 ===== */
 header {
+  /* 가로 방향 플렉스 박스, 좌우 공간 최대한 띄우기 */
   display: flex;
   justify-content: space-between;
+
+  /* 세로 중앙 정렬 */
   align-items: center;
+
+  /* 내부 여백 */
   padding: 15px 30px;
+
+  /* 배경 흰색 지정 */
   background-color: #fff;
 }
 
-/* 로고 이미지 */
+/* ===== 헤더 내 로고 이미지 ===== */
 header img {
+  /* 높이 고정 */
   height: 50px;
 }
 
-/* 로그인 / 회원가입 / 홈 */
+/* ===== 로그인 / 회원가입 / 홈 메뉴 리스트 ===== */
 header div ul {
+  /* 가로 방향 플렉스 박스 */
   display: flex;
+
+  /* 기본 리스트 스타일 제거 */
   list-style: none;
+
+  /* 각 메뉴 간 간격 */
   gap: 20px;
 }
 
+/* 메뉴 아이템 개별 스타일 */
 header div ul li {
+  /* 글자 크기 설정 */
   font-size: 0.95rem;
+
+  /* 마우스 포인터 모양 변경 (클릭 가능 표시) */
   cursor: pointer;
 }
 
+/* 메뉴 내 링크 스타일 */
 header div ul li a {
+  /* 링크 기본 밑줄 제거 */
   text-decoration: none;
+
+  /* 기본 글자색 지정 */
   color: #000;
 }
 
+/* 메뉴 링크에 마우스 오버 시 스타일 */
 header div ul li a:hover {
+  /* 밑줄 표시 */
   text-decoration: underline;
+
+  /* 초록색 계열로 색상 변경 */
   color: #007a33;
 }
 
-/* Navigation (nav bar) */
+/* ===== 내비게이션 바 (nav) ===== */
 nav {
+  /* 배경 흰색 */
   background-color: #ffffff;
+
+  /* 아래쪽에 두꺼운 초록색 실선 */
   border-bottom: 4px solid #007a33;
+
+  /* 위아래 패딩 */
   padding: 10px 0;
 }
 
+/* nav 내 메뉴 리스트 */
 nav ul {
+  /* 가로 방향 플렉스 박스 */
   display: flex;
+
+  /* 중앙 정렬 */
   justify-content: center;
+
+  /* 리스트 스타일 제거 */
   list-style: none;
+
+  /* 메뉴 간격 넓게 */
   gap: 40px;
 }
 
+/* nav 내 각 메뉴 항목 */
 nav li {
+  /* 글자 크기 및 굵기 */
   font-size: 1rem;
   font-weight: bold;
 }
 
+/* nav 메뉴 내 링크 스타일 */
 nav li a {
+  /* 밑줄 제거 */
   text-decoration: none;
+
+  /* 글자 색상 */
   color: #000;
 }
 
+/* nav 메뉴 링크 호버 시 스타일 */
 nav li a:hover {
+  /* 밑줄 대신 아래쪽에 2px 실선 */
   border-bottom: 2px solid #007a33;
+
+  /* 글자 색상 초록색으로 변경 */
   color: #007a33;
 }
 
-/* main 영역 */
+/* ===== 메인 컨텐츠 영역 ===== */
 main {
+  /* flex-grow 1로 남은 공간 모두 차지 */
   flex: 1;
+
+  /* 상하 여백 */
   padding: 5px 0px;
+
+  /* 최소 높이 지정 */
   min-height: 400px;
 }
 
-/* footer */
+/* ===== 푸터 영역 ===== */
 footer {
+  /* 배경색 초록색 */
   background-color: #007a33;
+
+  /* 글자 흰색 */
   color: white;
+
+  /* 가운데 정렬 */
   text-align: center;
+
+  /* 높이 고정 */
   height: 200px;
+
+  /* 상하 패딩 */
   padding: 20px 0;
+
+  /* 글자 크기 */
   font-size: 0.9rem;
 }

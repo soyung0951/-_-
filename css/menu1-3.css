@@ -1,4 +1,5 @@
-/* 기본 설정 */
+/* ===== 기본 설정 ===== */
+/* 본문 영역 기본 폰트, 배경, 색상, 내부 여백, 박스 크기 조절 설정 */
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 	background-color: #ffffff;
@@ -8,67 +9,77 @@ body {
 }
 
 /* ===== 테이블 영역 ===== */
+/* 테이블 섹션 아래쪽 여백 */
 .table-section {
 	margin-bottom: 40px;
 }
 
+/* 테이블 전체 너비, 셀 간격 없애고 배경과 테두리 설정 */
 .table-section table {
 	width: 100%;
 	border-collapse: collapse;
-	background-color: #ffffff;  /* 배경 흰색 */
-	border: 1px solid #aaa; /* 전체 테두리 */
+	background-color: #ffffff;  /* 테이블 배경을 흰색으로 지정 */
+	border: 1px solid #aaa;     /* 테이블 전체 외곽 테두리 */
 }
 
+/* 테이블 헤더 및 셀 공통 스타일: 테두리, 패딩, 중앙 정렬, 폰트 크기 지정 */
 .table-section th,
 .table-section td {
-	border: 1px solid #aaa; /* 셀별 테두리 */
+	border: 1px solid #aaa; /* 각 셀 테두리 */
 	padding: 14px;
 	text-align: center;
 	font-size: 0.95rem;
 }
 
+/* 테이블 헤더 배경, 글자색, 글씨 두껍게 */
 .table-section th {
 	background-color: #558b6e;
 	color: white;
 	font-weight: bold;
 }
 
-/* ===== 카드 영역 (공통) ===== */
+/* ===== 카드 영역 (공통 스타일) ===== */
+/* 카드 및 transport-card 클래스에 공통 배경색, 패딩, 둥근 모서리, 그림자, 테두리, 박스 크기 지정 */
 .card,
 .transport-card {
-	background-color: #ffffff;  /* 카드 배경 흰색 */
+	background-color: #ffffff;  /* 카드 배경은 흰색 */
 	padding: 20px;
 	border-radius: 15px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-	border: 1px solid #ccc; /* 테두리 추가 */
+	border: 1px solid #ccc; /* 연한 회색 테두리 추가 */
 	box-sizing: border-box;
 }
 
+/* 카드 및 transport-card 내부 h3 제목 글씨 크기와 아래 마진 지정 */
 .card h3,
 .transport-card h3 {
 	font-size: 1.2rem;
 	margin-bottom: 10px;
 }
 
+/* 카드 및 transport-card 내 단락 글씨 크기와 위아래 마진 지정 */
 .card p,
 .transport-card p {
 	font-size: 0.95rem;
 	margin: 5px 0;
 }
 
+/* 카드 및 transport-card 내 목록 ul에 왼쪽 들여쓰기와 위아래 마진 지정 */
 .card ul,
 .transport-card ul {
 	padding-left: 20px;
 	margin: 10px 0;
 }
 
+/* 카드 및 transport-card 내 리스트 아이템 글씨 크기와 아래 마진 지정 */
 .card li,
 .transport-card li {
 	font-size: 0.9rem;
 	margin-bottom: 4px;
 }
 
-/* ===== 버튼 ===== */
+/* ===== 버튼 스타일 ===== */
+/* 링크 버튼 공통: 인라인 블록, 여백, 패딩, 배경색, 글자색, 테두리, 둥근 모서리, 폰트 크기, 커서 모양, 텍스트 꾸밈, 배경색 변환 효과 */
 .link-btn {
 	display: inline-block;
 	margin-top: 8px;
@@ -83,44 +94,50 @@ body {
 	transition: background-color 0.3s;
 }
 
+/* 링크 버튼 마우스 오버 시 배경색 어둡게 변경 */
 .link-btn:hover {
 	background-color: #3f7750;
 }
 
 /* ===== 카드 레이아웃 ===== */
+/* 카드 섹션을 그리드 레이아웃으로 2열 구성, 칸 사이 간격 지정 */
 .card-section {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 }
 
-/* ===== 반응형 ===== */
+/* ===== 반응형 처리 (화면 너비 768px 이하) ===== */
 @media screen and (max-width: 768px) {
-	/* 테이블 폰트 크기 축소 */
+	/* 테이블 폰트 크기 조금 작게 조정 */
 	.table-section table {
 		font-size: 0.9rem;
 	}
 
+	/* 테이블 헤더와 셀 패딩 작게 */
 	.table-section th,
 	.table-section td {
 		padding: 10px;
 	}
 
-	/* 카드 1열로 변경 */
+	/* 카드 영역을 1열 그리드로 변경 */
 	.card-section {
 		grid-template-columns: 1fr;
 	}
 
+	/* 카드 내 패딩 조금 줄임 */
 	.card,
 	.transport-card {
 		padding: 16px;
 	}
 
+	/* 카드 제목 폰트 크기 조금 줄임 */
 	.card h3,
 	.transport-card h3 {
 		font-size: 1.1rem;
 	}
 
+	/* 카드 본문 및 리스트 아이템 폰트 크기 줄임 */
 	.card p,
 	.transport-card p,
 	.card li,
@@ -128,6 +145,7 @@ body {
 		font-size: 0.9rem;
 	}
 
+	/* 링크 버튼 너비 100%, 중앙 정렬 */
 	.link-btn {
 		width: 100%;
 		text-align: center;

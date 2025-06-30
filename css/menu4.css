@@ -1,9 +1,13 @@
+/* ===== 기본 초기화 ===== */
+/* 모든 요소에 기본 여백과 패딩 제거, 박스 크기 계산 방식을 border-box로 설정 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== 본문 영역 ===== */
+/* 전체 폰트, 배경색, 글자색, 내부 여백 지정 */
 body {
   font-family: "Noto Sans KR", sans-serif;
   background-color: #fff;
@@ -11,6 +15,8 @@ body {
   padding: 20px;
 }
 
+/* ===== 게시판 섹션 ===== */
+/* 게시판 전체 컨테이너 테두리, 둥근 모서리, 넘침 숨김, 최대 너비 및 가운데 정렬 */
 .board-section {
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -19,6 +25,8 @@ body {
   margin: 0 auto;
 }
 
+/* ===== 게시판 헤더 ===== */
+/* 플렉스 박스 적용, 공간 배분, 정렬, 배경색과 글자색, 패딩 설정 */
 .board-header {
   display: flex;
   justify-content: space-between;
@@ -28,10 +36,12 @@ body {
   padding: 10px 20px;
 }
 
+/* ===== 글쓰기 버튼 ===== */
+/* 배경색, 그림자, 글자색, 패딩, 테두리 없음, 둥근 모서리, 마우스 커서 변경, 글자 크기 설정 */
 .write-btn {
   background-color: #558b6e;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
@@ -39,29 +49,37 @@ body {
   font-size: 14px;
 }
 
+/* ===== 게시판 테이블 ===== */
+/* 너비 100%, 셀 간 간격 없앰 */
 .board-table {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* 테이블 데이터 셀의 내부 여백, 아래쪽 테두리 설정 */
 .board-table td {
   padding: 12px 20px;
   border-bottom: 1px solid #ccc;
 }
 
+/* 테이블 마지막 셀 내용 오른쪽 정렬 */
 .board-table td:last-child {
   text-align: right;
 }
 
+/* 특정 행 배경색 지정 (회색) */
 .board-table tr.gray {
   background-color: #f0f0f0;
 }
 
+/* 마우스 오버 시 테두리 색상과 위치 조정 */
 .board-table tr:hover {
   outline: 2px solid #007a33;
   outline-offset: -1px;
 }
 
+/* ===== 폼 섹션 ===== */
+/* 최대 너비 제한, 가운데 정렬, 내부 여백, 테두리, 둥근 모서리 */
 .form-section {
   max-width: 800px;
   margin: 0 auto;
@@ -70,21 +88,25 @@ body {
   border-radius: 6px;
 }
 
+/* 폼 제목 아래쪽 여백과 텍스트 색상 */
 .form-section h2 {
   margin-bottom: 20px;
   color: #007a33;
 }
 
+/* 폼 그룹 간 아래쪽 여백 */
 .form-group {
   margin-bottom: 15px;
 }
 
+/* 폼 라벨을 블록 요소로 표시, 아래 여백과 굵은 글씨 */
 .form-group label {
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
 }
 
+/* 입력 필드 및 텍스트 영역 너비 100%, 내부 여백, 테두리, 둥근 모서리, 폰트 크기 및 폰트 설정 */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -95,6 +117,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/* 폼 작업 영역: 플렉스 박스, 오른쪽 정렬, 요소 간 간격, 위쪽 여백 */
 .form-actions {
   display: flex;
   justify-content: flex-end;
@@ -102,6 +125,7 @@ body {
   margin-top: 20px;
 }
 
+/* 폼 버튼 배경색, 글자색, 테두리 없음, 패딩, 둥근 모서리, 마우스 커서, 폰트 크기 설정 */
 .form-actions button {
   background-color: #558d5a;
   color: white;
@@ -112,6 +136,7 @@ body {
   font-size: 14px;
 }
 
+/* 폼 버튼 호버 시 배경색 변경 */
 .form-actions button:hover {
   background-color: #007a33;
 }
