@@ -6,7 +6,7 @@
     <title>모두의_길:대구</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
-<body onload="loadPage('home.html')">
+<body onload="loadPage('home.html'); openPopup('popup1.html')">
     <div class="wrapper">
         <header>
             <a href="#" onclick="loadPage('home.html')">
@@ -15,8 +15,8 @@
 
             <div>
                 <ul>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#" onclick="openPopup('popup1.html')">로그인</a></li>
+                    <li><a href="#" onclick="openPopup('popup2.html')">회원가입</a></li>
                     <li><a href="#" onclick="loadPage('home.html')">홈</a></li>
                 </ul>
             </div>

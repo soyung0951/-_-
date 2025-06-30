@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  width: 500px;
+  background-color: #fff;
+  padding: 0; /* 요청 반영 */
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px; /* 요소들 간 여백 확보 */
+}
+
+.popup-header {
+  background-color: #0d883d;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.shadow-box {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #eee;
+  box-shadow: none; /* 그림자 없음 */
+  margin-top: 5px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0d883d;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.links {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.links a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  line-height: 1;
+  padding: 0 10px;
+  user-select: none;
+}
+.close-btn:hover {
+  color: #ccc;
+}
